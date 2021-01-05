@@ -1,0 +1,8 @@
+Question: You are given a string S.
+Your task is to print all possible combinations, up to size k, of the string in lexicographic sorted order.
+
+Answer:
+from itertools import combinations
+s,k=input().split()
+for size in range(int(k)):
+    print(*map(''.join,combinations(sorted(s),size+1)),sep='\n')

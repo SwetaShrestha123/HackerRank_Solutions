@@ -1,0 +1,8 @@
+Question: Print all possible permutations of size 'k' of the string in lexicographic sorted order.
+
+from itertools import permutations
+string,integer=input().split(' ')
+permutation=list(permutations(string,int(integer)))
+permutation.sort()
+for i in permutation:
+    print(''.join(i))
